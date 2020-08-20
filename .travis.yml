@@ -1,4 +1,7 @@
 language: java
+jobs:
+  allow_failures:
+    - os: osx
 script: mvn --batch-mode --file ./src/pom.xml clean test -P test-consumer,test-business
 addons:
   sonarcloud:
@@ -6,6 +9,3 @@ addons:
     token:
       secure: "bcZCaSUU5nKwGe5oPNCaoFSl7JUd37hnYwE8PwUEgB5B+/kwoC0Cw+3vkY/6DGDUC1DAIDsQskPRJMBuTH/FKYrBAPQfGgmSxb7VxdeN4KcsX1nkpwCPt/+Xv5jbJUOP1YVDFbDBIoq/RB+zZChOd9aJMNmYsUwioDTtPzez/Y+X4+FbuRavp7YsZnoV8QJKcVLtddZ1BwqZeSqK9OmbIXiPidBl9yq/fUNjqIvws5TVEPhyx+70zg84PFdT2AlglE7gOYrNbJ/h0wT5zyLggWswtOSG70TpZgtjv3h9H12L/u2H3VqZMp6iAADkbvZDHMeobsJxhbI7Bf1a9HvW+pzbnVnu4xPAL+9u72FE45HZ8LUrE4zuc53HF1DQ1yI4U29OTGxRhdNo10qKQ8MfoaZVHp9O9pnwT/Ba5xmlBNeQnOJFXXFQQ/vq23boYV2G1yoYsr1paTk/4Q2RlqOiQUDmRhr+H90DH/OjDX2QeNfymAU9vS108s4cEwmX6lZhWroYrpKZK6H+is8xbbMmHa53LvqSMyeRyLJJ1Q1T46CwqrFnCAMKM0KPTrE18zGGe9neMAOLuIm79t2O52KOnJAlCFuIGble+K49SRfSm9IRAZ41JxgmPAWV0anlIZI8OBtSlXtGu3Q+EnRHWnQmvt3TUZw+rSav2VVRAs0mKlg=" # encrypted value of your token
 
-script:
-  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
