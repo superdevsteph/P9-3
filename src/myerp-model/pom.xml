@@ -52,11 +52,18 @@
 
 
         <!-- ========== Test Dependencies ========== -->
-        <!-- ===== Tests ===== -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-        </dependency>
+    	<!-- ===== Test unitaires ===== -->
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-api</artifactId>
+				<scope>test</scope>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+			<dependency>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				</dependency>
 
         <!-- ===== JSR 303 - Bean validation ===== -->
         <!-- implementation -->

@@ -20,6 +20,7 @@ import com.dummy.myerp.model.bean.comptabilite.JournalComptable;
 import com.dummy.myerp.model.bean.comptabilite.LigneEcritureComptable;
 import com.dummy.myerp.technical.exception.FunctionalException;
 import com.dummy.myerp.technical.exception.NotFoundException;
+import com.dummy.myerp.testbusiness.business.BusinessTestCase;
 
 
 class ComptabiliteManagerImplTest extends BusinessTestCase {
