@@ -4,6 +4,7 @@ jobs:
     - os: osx
 script: mvn --batch-mode --file ./src/pom.xml clean test -P test-consumer,test-business
   - sonar-scanner
+  mvn verify sonar:sonar -Dsonar.host.url=https://sonarcloud.io
   
 addons:
   sonarcloud:
