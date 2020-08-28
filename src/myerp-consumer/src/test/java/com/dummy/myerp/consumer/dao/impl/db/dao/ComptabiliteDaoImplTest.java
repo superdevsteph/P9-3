@@ -1,8 +1,13 @@
 package com.dummy.myerp.consumer.dao.impl.db.dao;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.fail;
+
+import com.dummy.myerp.model.bean.comptabilite.*;
+import com.dummy.myerp.technical.exception.NotFoundException;
+import com.dummy.myerp.testconsumer.consumer.ConsumerTestCase;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
@@ -11,18 +16,7 @@ import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-import com.dummy.myerp.model.bean.comptabilite.CompteComptable;
-import com.dummy.myerp.model.bean.comptabilite.EcritureComptable;
-import com.dummy.myerp.model.bean.comptabilite.JournalComptable;
-import com.dummy.myerp.model.bean.comptabilite.LigneEcritureComptable;
-import com.dummy.myerp.model.bean.comptabilite.SequenceEcritureComptable;
-import com.dummy.myerp.technical.exception.NotFoundException;
-import com.dummy.myerp.testconsumer.consumer.ConsumerTestCase;
+import static org.junit.jupiter.api.Assertions.*;
 
 class ComptabiliteDaoImplTest extends ConsumerTestCase {
 
